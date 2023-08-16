@@ -1,0 +1,61 @@
+
+{% extends 'partials/base.html' %}
+{% load crispy_forms_tags %}
+
+<style>
+    .card{
+        background-color: #D8C4B6;
+    }
+</style>
+{% block content %}
+    <div class="container">
+        <div class="row mt-5 pt-5">
+            <div class="col-md-4">
+                <div class="card shadow my-2">
+                    <div class="card-body">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{form |crispy}}
+                           
+                            <div class="mt-5 d-grid gap-2 d-md-block">
+                            <input type="submit" value="POST" class="btn btn-block btn-success" >
+        
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                {% for post in posts %}
+                <div class="card shadow my-2">
+                    <div class="card-body">
+                        <div class="row">
+                        
+                           <div class="col-md-4">
+                              <img src="{{post.image.url}}" class="img-responsive" width="200" height="200">  
+                            </div> 
+                          
+                            <div class="col-md-8">
+                               
+                                <small>{{post.date_created}}</small>
+                                <hr>
+                                <a class ="h3"href="{%url 'blog-post-detail' post.id%}">{{post.title}}</a>
+                                <p class="text-justify my-3">{{post.content}}</p>
+                                <small>Professor: {{post.Professor}}</small>
+                            </div>
+                             <div class="col-md-4">
+                                <span><a class="btn btn-danger "
+                                    href="{% url 'blog-post-delete' post.id %}">Delete</a></span>
+                                <span><a class="btn btn-primary mx-2 "
+                                    href="{% url 'blog-post-edit' post.id %}">Edit</a></span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                {% endfor %} 
+            </div>
+        </div>
+    </div>
+
+
+{% endblock  %} >

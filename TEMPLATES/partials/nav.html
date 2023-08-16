@@ -1,0 +1,33 @@
+<style>
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4F709C;
+    color: white;
+    position: sticky;
+    top: 0;
+    font-size: larger; 
+}
+</style>
+
+
+<nav class="navbar navbar-expand-lg navbar-primary  fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active navbar-brand mb-0 h1" aria-current="page" href="{% url 'Notice' %}">NOTICE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-brand mb-2 h1 " href="{% url 'ABoutus' %}">ABOUTUS</a>
+          </li>
+        </ul>
+        <a class="btn btn-primary" href="{% url 'logout' %}">LOGOUT</a>
+      </div>
+    </div>
+  </nav>

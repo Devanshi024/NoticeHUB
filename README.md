@@ -4,3 +4,5 @@ The NoticeHub project is developed using Python Django, enabling users to manage
 
 ![Screenshot (105)](https://github.com/Devanshi024/NoticeHUB/assets/95516331/8abb8c8d-3811-468c-8f82-f93933e94806)
 
+
+![Screenshot (107)](https://github.com/Devanshi024/NoticeHUB/assets/95516331/810ae2af-17d8-452f-9c06-981be4a2565a)

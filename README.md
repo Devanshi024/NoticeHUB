@@ -1,0 +1,1 @@
+The NoticeHub project is developed using Python Django, enabling users to manage notices effectively. Users can create, edit, and delete notices, with all data being stored in a database. The platform offers a user-friendly interface for seamless notice management, enhancing communication and organization within the specified community or group.
